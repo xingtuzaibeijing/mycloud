@@ -1,0 +1,14 @@
+/.idea
+/.mvn
+target/
+installer
+git
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.gitignore
+.mvn
+maven-wrapper.jar
+/.mvn/wrapper/
