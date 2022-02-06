@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8083
 spring:
   application:
     name: goods
@@ -16,3 +16,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+feign:
+  hystrix:
+    enabled: true

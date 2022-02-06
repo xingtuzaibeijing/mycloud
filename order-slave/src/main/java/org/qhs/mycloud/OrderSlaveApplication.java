@@ -1,12 +1,8 @@
 package org.qhs.mycloud;
 
-import org.qhs.myrule.MyRuleConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * exclude = DataSourceAutoConfiguration.class 取消数据源的自动创建,
@@ -20,13 +16,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
-@EnableHystrix
-@RibbonClient(name = "GOODS",configuration = MyRuleConfig.class)
-public class OrderApplication {
+public class OrderSlaveApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderSlaveApplication.class, args);
         System.out.println("启动成功");
     }
 

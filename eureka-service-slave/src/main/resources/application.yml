@@ -1,18 +1,19 @@
 server:
-  port: 8000
+  port: 8001
 spring:
   application:
-    name: eureka-service
+    name: eureka-service-slave
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/local?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull&useSSL=false&autoReconnect=true&failOverReadOnly=false
     username: root
     password: 123456
 eureka:
+  enable
   instance:
-    hostname: servicemaster.com
+    hostname: serviceslave.com
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://serviceslave.com:8001/eureka/
+      defaultZone: http://servicemaster.com:8000/eureka/

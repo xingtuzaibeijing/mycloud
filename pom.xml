@@ -4,9 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>order</module>
+        <module>order-slave</module>
         <module>goods</module>
         <module>common</module>
         <module>eureka-service</module>
+        <module>eureka-service-slave</module>
+        <module>goods-slave</module>
     </modules>
     <groupId>org.qhs</groupId>
     <artifactId>mycloud</artifactId>

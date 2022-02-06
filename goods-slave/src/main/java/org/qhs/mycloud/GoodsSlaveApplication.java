@@ -2,7 +2,7 @@ package org.qhs.mycloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * exclude = DataSourceAutoConfiguration.class 取消数据源的自动创建,
@@ -15,11 +15,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * @description 商品
  */
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaServiceApplication {
+@EnableEurekaClient
+public class GoodsSlaveApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(GoodsSlaveApplication.class, args);
         System.out.println("启动成功");
     }
 

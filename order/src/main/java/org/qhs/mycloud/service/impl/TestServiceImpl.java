@@ -30,7 +30,8 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, Test> implements Te
 	@Override
 //	@Transactional()
 	public void doTest(){
-		List<Test> testList = Arrays.asList(Test.builder().no(1L).name("1").build(), Test.builder().no(2L).name("1").build(), Test.builder().no(2L).name("1").build());
+		List<Test> testList = Arrays.asList(Test.builder().no(1L).name("1").build(),
+				Test.builder().no(2L).name("1").build(), Test.builder().no(2L).name("1").build());
 		this.saveBatch(testList);
 	}
 
