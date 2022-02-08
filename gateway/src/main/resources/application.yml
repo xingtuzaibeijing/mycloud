@@ -5,11 +5,14 @@ spring:
     name: gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
-        id: order_routh
-        uri: http://127.0.0.1:8080
-        predicates:
-          - Path=/*
+        - id: order_routh
+          uri: lb://ORDER
+          predicates:
+            - Path=/*
 eureka:
   instance:
     hostname: servicemaster.com
