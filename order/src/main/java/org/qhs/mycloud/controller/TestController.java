@@ -45,7 +45,7 @@ public class TestController {
 			System.out.println(serviceInstance.getHost()+"==="
 					+serviceInstance.getPort()+"===="+serviceInstance.getUri());
 		}
-		return "";
+		return "成功";
 	}
 
 	@GetMapping("/testRest")
